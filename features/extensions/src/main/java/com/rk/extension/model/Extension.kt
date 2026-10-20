@@ -3,7 +3,7 @@ package com.rk.extension
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import com.rk.common.PackageType
+import com.bfoxnet.pocketcode.common.PackageType
 import com.rk.extension.manager.ExtensionEntry
 import com.rk.extension.manager.StoreManager
 import com.rk.extension.model.ExtensionId
@@ -11,7 +11,7 @@ import com.rk.extension.model.ExtensionManifest
 import com.rk.extension.model.Package
 import com.rk.extension.model.Review
 import com.rk.extension.model.UpdatablePackage
-import com.rk.xededitor.BuildConfig
+import com.bfoxnet.pocketcode.xededitor.BuildConfig
 import java.io.File
 
 sealed interface Extension : Package {

@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.rk.terminal"
+    namespace = "com.bfoxnet.pocketcode.terminal"
     compileSdk = 37
 
     defaultConfig {

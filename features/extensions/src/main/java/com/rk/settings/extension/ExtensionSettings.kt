@@ -8,10 +8,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.rk.components.compose.preferences.base.PreferenceLayout
+import com.bfoxnet.pocketcode.components.compose.preferences.base.PreferenceLayout
 import com.rk.extension.LocalExtension
 import com.rk.extension.extensionManager
-import com.rk.resources.strings
+import com.bfoxnet.pocketcode.resources.strings
 
 @Composable
 fun ExtensionSettings(extension: LocalExtension?) {

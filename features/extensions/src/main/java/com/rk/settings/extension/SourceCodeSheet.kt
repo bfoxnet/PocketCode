@@ -20,14 +20,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
-import com.rk.components.SettingsItem
-import com.rk.components.compose.preferences.base.PreferenceGroup
+import com.bfoxnet.pocketcode.components.SettingsItem
+import com.bfoxnet.pocketcode.components.compose.preferences.base.PreferenceGroup
 import com.rk.extension.model.Package
-import com.rk.resources.drawables
-import com.rk.resources.fillPlaceholders
-import com.rk.resources.strings
-import com.rk.theme.Typography
-import com.rk.utils.SourceCodeProvider
+import com.bfoxnet.pocketcode.resources.drawables
+import com.bfoxnet.pocketcode.resources.fillPlaceholders
+import com.bfoxnet.pocketcode.resources.strings
+import com.bfoxnet.pocketcode.theme.Typography
+import com.bfoxnet.pocketcode.utils.SourceCodeProvider
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
