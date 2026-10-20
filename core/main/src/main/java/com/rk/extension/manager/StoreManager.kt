@@ -7,10 +7,10 @@ import com.rk.extension.InstallState
 import com.rk.extension.THEMES_API_BASE
 import com.rk.extension.model.ExtensionManifest
 import com.rk.extension.model.ReviewStats
-import com.rk.icons.pack.IconPackEntry
-import com.rk.theme.ThemeEntry
-import com.rk.utils.logError
-import com.rk.utils.okHttpClient
+import com.bfoxnet.pocketcode.icons.pack.IconPackEntry
+import com.bfoxnet.pocketcode.theme.ThemeEntry
+import com.bfoxnet.pocketcode.utils.logError
+import com.bfoxnet.pocketcode.utils.okHttpClient
 import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

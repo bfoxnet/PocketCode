@@ -1,8 +1,8 @@
 // DO NOT UPDATE PACKAGE NAME OTHERWISE EXTENSIONS WILL BREAK
 package com.rk.extension
 
-import com.rk.settings.CachedExtensionPreference
-import com.rk.settings.Preference
+import com.bfoxnet.pocketcode.settings.CachedExtensionPreference
+import com.bfoxnet.pocketcode.settings.Preference
 import kotlin.properties.ReadWriteProperty
 
 interface ExtensionSettings {

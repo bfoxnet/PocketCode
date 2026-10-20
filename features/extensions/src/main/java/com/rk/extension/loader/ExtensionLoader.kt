@@ -3,9 +3,9 @@ package com.rk.extension.loader
 import android.app.Activity
 import android.app.Application
 import androidx.core.content.pm.PackageInfoCompat
-import com.rk.DefaultScope
-import com.rk.crashhandler.CrashActivity
-import com.rk.events.Events
+import com.bfoxnet.pocketcode.DefaultScope
+import com.bfoxnet.pocketcode.crashhandler.CrashActivity
+import com.bfoxnet.pocketcode.events.Events
 import com.rk.extension.ExtensionAPI
 import com.rk.extension.ExtensionContext
 import com.rk.extension.ExtensionEvent
@@ -15,9 +15,9 @@ import com.rk.extension.apkFile
 import com.rk.extension.extensionManager
 import com.rk.extension.manager.ExtensionManager
 import com.rk.extension.manager.LoadedExtension
-import com.rk.utils.application
-import com.rk.utils.isMainThread
-import com.rk.utils.logError
+import com.bfoxnet.pocketcode.utils.application
+import com.bfoxnet.pocketcode.utils.isMainThread
+import com.bfoxnet.pocketcode.utils.logError
 import dalvik.system.PathClassLoader
 import java.lang.reflect.InvocationTargetException
 import kotlinx.coroutines.CoroutineName

@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.rk.ai"
+    namespace = "com.bfoxnet.pocketcode.ai"
     compileSdk { version = release(37) }
 
     defaultConfig { minSdk = 26 }

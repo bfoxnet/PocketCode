@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.rk.benchmark"
+    namespace = "com.bfoxnet.pocketcode.benchmark"
     compileSdk = 37
 
     defaultConfig {
