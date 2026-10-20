@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Xed-Editor</string>
+    <string name="app_name" translatable="false">PocketCode</string>
     <string name="unsupported_content">असमर्थित कंटेंट</string>
     <string name="restart_required">रिस्टार्ट जरूरी</string>
     <string name="save">सेव करें</string>

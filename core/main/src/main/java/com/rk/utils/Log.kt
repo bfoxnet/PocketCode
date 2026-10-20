@@ -3,7 +3,7 @@ package com.rk.utils
 import android.util.Log
 import com.rk.settings.debugOptions.LogCollector
 
-private const val TAG = "Xed-Editor"
+private const val TAG = "PocketCode"
 
 fun Any.logDebug(msg: String) {
     Log.d(this::class.java.simpleName, msg)
