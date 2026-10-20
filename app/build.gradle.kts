@@ -15,7 +15,7 @@ android {
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.rk.xededitor"
+        applicationId = "com.bfoxnet.pocketcode"
         minSdk = 26
 
         targetSdk = 37
@@ -43,7 +43,7 @@ android {
         create(playStoreFlavor) {
             dimension = distributionDimension
             // using this id because I don't want to go through 14 day testing again
-            applicationId = "com.rk.axion"
+            applicationId = "com.bfoxnet.pocketcode.play"
             buildConfigField("String", "FLAVOUR", "\"$playStoreFlavor\"")
         }
     }
@@ -118,7 +118,7 @@ android {
         debug {
             applicationIdSuffix = ".debug"
             versionNameSuffix = "-DEBUG"
-            resValue("string", "app_name", "Xed-Debug")
+            resValue("string", "app_name", "PocketCode-Debug")
         }
 
         create("benchmark") {

@@ -1,0 +1,104 @@
+name: Sync with upstream Xed-Editor
+
+on:
+  schedule:
+    # Every day at 06:23 UTC (off-minute to spread GitHub Actions load)
+    - cron: "23 6 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Force sync even if no new upstream commits"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout fork
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Add upstream remote and fetch
+        run: |
+          git remote add upstream https://github.com/Xed-Editor/Xed-Editor.git
+          git fetch upstream main --tags
+
+      - name: Check for new upstream commits
+        id: check
+        run: |
+          BEHIND=$(git rev-list --count main..upstream/main)
+          echo "behind=$BEHIND" >> "$GITHUB_OUTPUT"
+          echo "Fork is $BEHIND commit(s) behind upstream"
+          if [ "$BEHIND" -eq 0 ] && [ "${{ inputs.force }}" != "true" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Merge upstream into main
+        if: steps.check.outputs.skip != 'true'
+        id: merge
+        run: |
+          if git merge upstream/main --no-edit; then
+            echo "conflict=false" >> "$GITHUB_OUTPUT"
+          else
+            git merge --abort
+            echo "conflict=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Push clean merge
+        if: steps.check.outputs.skip != 'true' && steps.merge.outputs.conflict == 'false'
+        run: git push origin main
+
+      - name: Create conflict PR
+        if: steps.check.outputs.skip != 'true' && steps.merge.outputs.conflict == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="sync-upstream/$(date +%Y%m%d-%H%M%S)"
+          git checkout -b "$BRANCH"
+          git merge upstream/main --no-commit || true
+          # Stage conflict markers as-is so the human can resolve them
+          git add -A || true
+          git diff --cached --name-only --diff-filter=U > conflicts.txt || true
+          git commit -m "chore: sync upstream (conflicts need manual resolution)" || true
+          git push origin "$BRANCH"
+          {
+            echo "## Upstream sync conflicts"
+            echo ""
+            echo "Upstream \`Xed-Editor/Xed-Editor:main\` could not be merged cleanly."
+            echo "This branch contains the merge with conflict markers — resolve, commit, then merge this PR."
+            echo ""
+            echo "### Files with conflicts"
+            echo "\`\`\`"
+            cat conflicts.txt
+            echo "\`\`\`"
+            echo ""
+            echo "**Reminder:** keep \`com.bfoxnet.pocketcode\` IDs, \`PocketCode\` app name, and \`bfoxnet/PocketCode\` update URLs when resolving."
+          } > body.md
+          gh pr create \
+            --repo bfoxnet/PocketCode \
+            --head "$BRANCH" \
+            --base main \
+            --title "Sync upstream Xed-Editor (conflicts: $(date +%F))" \
+            --body-file body.md
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Upstream sync"
+            echo "- Behind: ${{ steps.check.outputs.behind || '0' }} commits"
+            echo "- Conflict: ${{ steps.merge.outputs.conflict || 'false' }}"
+          } >> "$GITHUB_STEP_SUMMARY"

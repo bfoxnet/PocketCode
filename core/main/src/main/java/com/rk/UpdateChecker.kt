@@ -46,7 +46,7 @@ object UpdateChecker {
                     return@launch
                 }
 
-                val url = "https://api.github.com/repos/Xed-Editor/Xed-Editor/commits?sha=$branch"
+                val url = "https://api.github.com/repos/bfoxnet/PocketCode/commits?sha=$branch"
                 val client = okHttpClient
 
                 val request = Request.Builder().url(url).build()
@@ -105,7 +105,7 @@ object UpdateChecker {
                         setTitle(strings.update_av.getString())
                         setMessage(updates.joinToString("\n"))
                         setPositiveButton(strings.update.getString()) { _, _ ->
-                            val url = "https://github.com/Xed-Editor/Xed-Editor"
+                            val url = "https://github.com/bfoxnet/PocketCode"
                             val intent = Intent(Intent.ACTION_VIEW).apply { data = url.toUri() }
                             context.startActivity(intent)
                         }
