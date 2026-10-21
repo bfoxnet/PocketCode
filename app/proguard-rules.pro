@@ -49,8 +49,8 @@
 }
 
 # Models persisted as JSON - their field names are part of the stored format.
--keepclassmembers class com.rk.settings.editor.FontRegistry$Font { <fields>; }
--keepclassmembers class com.rk.runner.** { <fields>; }
+-keepclassmembers class com.bfoxnet.pocketcode.settings.editor.FontRegistry$Font { <fields>; }
+-keepclassmembers class com.bfoxnet.pocketcode.runner.** { <fields>; }
 
 # --- kotlin-reflect ---------------------------------------------------------
 # Preference.preferenceTypes() enumerates Settings' delegated properties with

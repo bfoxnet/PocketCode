@@ -2,9 +2,9 @@ package com.rk.extension.api
 
 import android.util.Log
 import com.rk.extension.model.ExtensionId
-import com.rk.resources.getString
-import com.rk.resources.strings
-import com.rk.settings.debugOptions.LogCollector
+import com.bfoxnet.pocketcode.resources.getString
+import com.bfoxnet.pocketcode.resources.strings
+import com.bfoxnet.pocketcode.settings.debugOptions.LogCollector
 
 fun ExtensionId.logDebug(msg: String) {
     Log.d(this, msg)

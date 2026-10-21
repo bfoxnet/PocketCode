@@ -28,18 +28,18 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import coil.request.CachePolicy
 import coil.request.ImageRequest
-import com.rk.App
-import com.rk.common.PackageType
-import com.rk.components.compose.preferences.base.PreferenceTemplate
+import com.bfoxnet.pocketcode.App
+import com.bfoxnet.pocketcode.common.PackageType
+import com.bfoxnet.pocketcode.components.compose.preferences.base.PreferenceTemplate
 import com.rk.extension.Extension
 import com.rk.extension.InstallState
 import com.rk.extension.extensionManager
 import com.rk.extension.manager.StoreManager
 import com.rk.extension.model.Package
 import com.rk.extension.model.UpdatablePackage
-import com.rk.resources.drawables
-import com.rk.resources.strings
-import com.rk.theme.Typography
+import com.bfoxnet.pocketcode.resources.drawables
+import com.bfoxnet.pocketcode.resources.strings
+import com.bfoxnet.pocketcode.theme.Typography
 
 @Composable
 fun PackageCard(
