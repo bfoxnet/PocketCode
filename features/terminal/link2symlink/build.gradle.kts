@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.bfoxnet.pocketcode.link2symlink"
+    namespace = "com.rk.link2symlink"
     ndkVersion = "28.2.13676358"
     compileSdk {
         version = release(36) {

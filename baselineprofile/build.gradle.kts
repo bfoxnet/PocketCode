@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.bfoxnet.pocketcode.baselineprofile"
+    namespace = "com.rk.baselineprofile"
     compileSdk = 37
 
     defaultConfig {

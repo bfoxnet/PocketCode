@@ -32,8 +32,8 @@ import coil.request.ImageRequest
 import com.rk.extension.Extension
 import com.rk.extension.extensionManager
 import com.rk.extension.model.ExtensionId
-import com.bfoxnet.pocketcode.resources.drawables
-import com.bfoxnet.pocketcode.resources.strings
+import com.rk.resources.drawables
+import com.rk.resources.strings
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 

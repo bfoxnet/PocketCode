@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.bfoxnet.pocketcode.git"
+    namespace = "com.rk.git"
     compileSdk = 37
 
     defaultConfig {

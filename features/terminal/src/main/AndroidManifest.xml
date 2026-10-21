@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
         <service
-            android:name="com.bfoxnet.pocketcode.terminal.SessionService"
+            android:name="com.rk.terminal.SessionService"
             android:foregroundServiceType="specialUse" />
 
         <activity
-            android:name="com.bfoxnet.pocketcode.activities.terminal.Terminal"
+            android:name="com.rk.activities.terminal.Terminal"
             android:exported="true"
             android:label="Terminal"
             android:launchMode="singleTask"

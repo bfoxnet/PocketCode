@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.bfoxnet.pocketcode.runner"
+    namespace = "com.rk.runner"
     compileSdk = 37
 
     defaultConfig {

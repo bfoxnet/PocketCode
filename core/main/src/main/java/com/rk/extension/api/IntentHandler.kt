@@ -1,6 +1,6 @@
 package com.rk.extension.api
 
-import com.bfoxnet.pocketcode.file.FileObject
+import com.rk.file.FileObject
 
 /** Interface for handling intents in Xed-Editor. */
 @XedExtensionPoint

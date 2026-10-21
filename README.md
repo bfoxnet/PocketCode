@@ -24,11 +24,11 @@ https://xed-editor.app
 ## Download
 
 <div>
-  <a href="https://android.izzysoft.de/repo/apk/com.bfoxnet.pocketcode.xededitor">
-    <img src="https://img.shields.io/endpoint?url=https://apt.izzysoft.de/fdroid/api/v1/shield/com.bfoxnet.pocketcode.xededitor&label=IzzyOnDroid&cacheSeconds=33000">
+  <a href="https://android.izzysoft.de/repo/apk/com.rk.xededitor">
+    <img src="https://img.shields.io/endpoint?url=https://apt.izzysoft.de/fdroid/api/v1/shield/com.rk.xededitor&label=IzzyOnDroid&cacheSeconds=33000">
   </a>
-  <a href="https://f-droid.org/packages/com.bfoxnet.pocketcode.xededitor">
-    <img src="https://img.shields.io/f-droid/v/com.bfoxnet.pocketcode.xededitor">
+  <a href="https://f-droid.org/packages/com.rk.xededitor">
+    <img src="https://img.shields.io/f-droid/v/com.rk.xededitor">
   </a>
 </div>
 
@@ -36,9 +36,9 @@ https://xed-editor.app
 - **Latest Stable Build**: Download
   from [Releases](https://github.com/Xed-Editor/Xed-Editor/releases)
 
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="75">](https://play.google.com/store/apps/details?id=com.bfoxnet.pocketcode.axion)
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/com.bfoxnet.pocketcode.xededitor)
-[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png?ref_type=heads" alt="Get it on IzzyOnDroid" height="80">](https://apt.izzysoft.de/fdroid/index/apk/com.bfoxnet.pocketcode.xededitor)
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="75">](https://play.google.com/store/apps/details?id=com.rk.axion)
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/com.rk.xededitor)
+[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png?ref_type=heads" alt="Get it on IzzyOnDroid" height="80">](https://apt.izzysoft.de/fdroid/index/apk/com.rk.xededitor)
 
 ---
 
@@ -63,8 +63,8 @@ The app ships in two flavors:
 
 | Flavor      | applicationId        | Extensions module | Notes                                              |
 | ----------- | -------------------- | ----------------- | -------------------------------------------------- |
-| `community` | `com.bfoxnet.pocketcode.xededitor`   | included          | Default flavor. GitHub / F-Droid / IzzyOnDroid.     |
-| `playstore` | `com.bfoxnet.pocketcode.axion`       | excluded          | Google Play build; minified, without the extension store. |
+| `community` | `com.rk.xededitor`   | included          | Default flavor. GitHub / F-Droid / IzzyOnDroid.     |
+| `playstore` | `com.rk.axion`       | excluded          | Google Play build; minified, without the extension store. |
 
 The `community` flavor is the default flavor (used by CI and by tooling that needs a default
 variant). Build a specific flavor with a flavor-qualified task; the unqualified aggregate tasks such
@@ -75,7 +75,7 @@ as `assembleDebug` build every flavor.
 The flavour is declared once per product flavour in `app/build.gradle.kts` as the
 `BuildConfig.FLAVOUR` field, and each flavour's `XedApplication` publishes it during startup. Library
 modules cannot read the application module's `BuildConfig`, so they should branch on the shared
-`com.bfoxnet.pocketcode.app.AppFlavour` instead:
+`com.rk.app.AppFlavour` instead:
 
 ```kotlin
 // True when this build bundles the extensions module and the user has not disabled it.

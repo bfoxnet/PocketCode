@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.bfoxnet.pocketcode.resources"
+    namespace = "com.rk.resources"
     compileSdk = 37
 
     lint.disable += "MissingTranslation"

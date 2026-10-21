@@ -53,7 +53,7 @@ val gitCommitDate: Provider<String> =
     }
 
 android {
-    namespace = "com.bfoxnet.pocketcode.xededitor"
+    namespace = "com.rk.xededitor"
     compileSdk = 37
 
     defaultConfig {
@@ -153,7 +153,7 @@ dependencies {
 
     // Markdown rendering (Compose). This is a Kotlin Multiplatform library, but it publishes
     // Android AAR variants that Gradle resolves automatically for this Android-only project.
-    // `api` is used because com.bfoxnet.pocketcode.markdown.MarkdownText exposes library types (ImageTransformer)
+    // `api` is used because com.rk.markdown.MarkdownText exposes library types (ImageTransformer)
     // in its public signature, so feature modules need them on their compile classpath.
     api(libs.markdown.renderer)
     api(libs.markdown.renderer.m3)
