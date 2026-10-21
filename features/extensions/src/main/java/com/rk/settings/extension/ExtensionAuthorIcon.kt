@@ -9,7 +9,7 @@ import coil.compose.AsyncImage
 import coil.request.CachePolicy
 import coil.request.ImageRequest
 import com.rk.extension.model.PackageAuthor
-import com.rk.resources.drawables
+import com.bfoxnet.pocketcode.resources.drawables
 
 @Composable
 fun ExtensionAuthorIcon(author: PackageAuthor, modifier: Modifier = Modifier) {

@@ -8,9 +8,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.ParagraphStyle
 import androidx.compose.ui.text.SpanStyle
-import com.rk.activities.main.ui.TaskOutputState
-import com.rk.utils.parseAnsiToAnnotatedString
-import com.rk.utils.stripAnsi
+import com.bfoxnet.pocketcode.activities.main.ui.TaskOutputState
+import com.bfoxnet.pocketcode.utils.parseAnsiToAnnotatedString
+import com.bfoxnet.pocketcode.utils.stripAnsi
 import java.util.Properties
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

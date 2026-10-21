@@ -33,7 +33,7 @@
     </queries>
 
     <application
-        android:name="com.rk.application.XedApplication"
+        android:name="com.bfoxnet.pocketcode.application.XedApplication"
         android:allowBackup="true"
         android:appCategory="productivity"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -53,7 +53,7 @@
             tools:targetApi="29" />
 
         <activity
-            android:name="com.rk.activities.main.MainActivity"
+            android:name="com.bfoxnet.pocketcode.activities.main.MainActivity"
             android:alwaysRetainTaskState="true"
             android:exported="true"
             android:inputType="textFilter"
@@ -106,13 +106,13 @@
         </provider>
 
         <activity
-            android:name="com.rk.crashhandler.CrashActivity"
+            android:name="com.bfoxnet.pocketcode.crashhandler.CrashActivity"
             android:exported="false" />
         <activity
-            android:name="com.rk.activities.settings.SettingsActivity"
+            android:name="com.bfoxnet.pocketcode.activities.settings.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name="com.rk.project.ProjectCreatorActivity"
+            android:name="com.bfoxnet.pocketcode.project.ProjectCreatorActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
