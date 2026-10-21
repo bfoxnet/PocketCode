@@ -1,6 +1,6 @@
 package com.rk.extension.model
 
-import com.bfoxnet.pocketcode.common.PackageType
+import com.rk.common.PackageType
 import io.github.z4kn4fein.semver.toVersionOrNull
 import kotlinx.serialization.Serializable
 

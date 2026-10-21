@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.bfoxnet.pocketcode.proot"
+    namespace = "com.rk.proot"
     ndkVersion = "28.2.13676358"
     compileSdk {
         version = release(36)

@@ -5,7 +5,7 @@ plugins {
     id("com.gradleup.shadow") version "9.4.1"
 }
 
-group = "com.bfoxnet.pocketcode"
+group = "com.rk"
 version = "1.0"
 
 tasks.named<ShadowJar>("shadowJar") {

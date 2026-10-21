@@ -11,7 +11,7 @@ val communityFlavor = "community"
 val playStoreFlavor = "playstore"
 
 android {
-    namespace = "com.bfoxnet.pocketcode.application"
+    namespace = "com.rk.application"
     compileSdk = 37
 
     defaultConfig {
@@ -34,7 +34,7 @@ android {
         create(communityFlavor) {
             dimension = distributionDimension
             isDefault = true
-            // Published at runtime as com.bfoxnet.pocketcode.app.AppFlavour via AppFlavour.init(BuildConfig.FLAVOUR).
+            // Published at runtime as com.rk.app.AppFlavour via AppFlavour.init(BuildConfig.FLAVOUR).
             buildConfigField("String", "FLAVOUR", "\"$communityFlavor\"")
         }
 

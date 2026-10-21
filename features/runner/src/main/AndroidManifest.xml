@@ -4,7 +4,7 @@
 
     <application>
         <activity
-            android:name="com.bfoxnet.pocketcode.runner.runners.web.markdown.MDViewer"
+            android:name="com.rk.runner.runners.web.markdown.MDViewer"
             android:exported="false"
             tools:ignore="Instantiatable" />
     </application>

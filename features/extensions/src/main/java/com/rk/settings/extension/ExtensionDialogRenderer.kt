@@ -10,8 +10,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import com.rk.extension.UpdatableExtension
-import com.bfoxnet.pocketcode.resources.strings
-import com.bfoxnet.pocketcode.settings.Settings
+import com.rk.resources.strings
+import com.rk.settings.Settings
 import kotlinx.coroutines.launch
 
 /**

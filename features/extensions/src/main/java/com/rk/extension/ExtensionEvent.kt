@@ -1,6 +1,6 @@
 package com.rk.extension
 
-import com.bfoxnet.pocketcode.events.Event
+import com.rk.events.Event
 
 /** Events related to extension lifecycle and state. */
 sealed interface ExtensionEvent : Event {
