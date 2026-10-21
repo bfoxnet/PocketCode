@@ -71,11 +71,12 @@ android {
             val isGitHubActions = System.getenv("GITHUB_ACTIONS") == "true"
 
             val propertiesFilePath =
-                if (isGitHubActions) {
-                    "/tmp/signing.properties"
-                } else {
-                    "/home/rohit/Android/xed-signing/signing.properties"
-                }
+                System.getenv("POCKETCODE_SIGNING_PROPERTIES")
+                    ?: if (isGitHubActions) {
+                        "/tmp/signing.properties"
+                    } else {
+                        "/root/keystore/signing.properties"
+                    }
 
             val propertiesFile = File(propertiesFilePath)
             if (propertiesFile.exists()) {
